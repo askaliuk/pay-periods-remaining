@@ -1,0 +1,9 @@
+How to use TODO:
+* Anything with colon at the end of the line is a project title, you can also nest projects by indenting them.
+* ⌘ + enter or ⌘ + i: new task
+* ⌘ + d**: toggle task as completed
+
+TODO:
+ ✔ implement basic JSON api via web.py using: http://mimerender.readthedocs.org/en/latest/examples.html#web-py @done (13-03-18 21:29)
+ ✔ deploy API on AppFog via wsgi @done (13-03-18 21:29)
+ ☐ implement JavaScript client

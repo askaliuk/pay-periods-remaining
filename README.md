@@ -1,4 +1,6 @@
-pay-periods-remaining
+Pay period remaining
 =====================
 
-Simple application which helps to calculate pay periods remaining in current year
+Simple web application which helps to calculate pay periods, remaining in current year.
+
+Current version: pre-alpha
