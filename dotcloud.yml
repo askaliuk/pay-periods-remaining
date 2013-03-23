@@ -1,0 +1,6 @@
+www:
+  type: static
+  approot: client/public
+api:
+  type: python
+  approot: server

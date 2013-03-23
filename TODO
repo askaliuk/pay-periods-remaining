@@ -4,6 +4,5 @@ How to use TODO:
 * ⌘ + d**: toggle task as completed
 
 TODO:
- ✔ implement basic JSON api via web.py using: http://mimerender.readthedocs.org/en/latest/examples.html#web-py @done (13-03-18 21:29)
- ✔ deploy API on AppFog via wsgi @done (13-03-18 21:29)
- ☐ implement JavaScript client
+ ✔ basic server organization @done (13-03-21 08:12)
+ ☐ put JavaScript client template and setup static serving
