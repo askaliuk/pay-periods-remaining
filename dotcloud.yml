@@ -1,6 +1,7 @@
 www:
-  type: static
-  approot: client/public
+   type: static
+   approot: client/public
+
 api:
-  type: python
-  approot: server
+   type: python
+   approot: server
