@@ -9,8 +9,36 @@ Current version: pre-alpha
 
 Run development server:
 
-	cd server && python app.py
+	python server/app.py
+
+# Client
 
 Build client (into client/public folder):
 
     cd client && brunch build
+
+Watch client directory and rebuild if something changed:
+
+    cd client && brunch watch
+
+# Nginx configuration example
+
+Assuming that Python-based API is on localhost:8002
+
+    server {
+        listen       8001;
+        listen       localhost:8001;
+        server_name  localhost;
+
+   		location / {
+       		root   /path/to/pay-periods-remaining/client/public;
+       	}
+
+       	location = /api {
+        	proxy_set_header Host $http_host;
+        	proxy_redirect off;
+        	proxy_set_header X-Real-IP $remote_addr;
+        	proxy_set_header X-Scheme $scheme;
+        	proxy_pass http://localhost:8002/;
+    	}
+	}

@@ -4,5 +4,6 @@ How to use TODO:
 * ⌘ + d**: toggle task as completed
 
 TODO:
- ✔ basic server organization @done (13-03-21 08:12)
- ☐ put JavaScript client template and setup static serving
+ ✔ put JavaScript client template and setup static serving @done (13-03-28 08:17)
+ ✔ implement basic UI (header, start date select, pay frequency select) @done (13-03-28 16:33)
+ ☐ implement model and server API call

@@ -1,4 +1,4 @@
-var HomeView = require('modules/helloworld/views');
+var HomeView = require('modules/home/views');
 
 module.exports = Backbone.Router.extend({
     routes: {
