@@ -1,16 +1,17 @@
-import web
-from api import ApiRoot
+from flask import Flask, json
+import mimerender
+import logic
 
-urls = (
-    '/api/(.+)', ApiRoot
-)
+mimerender = mimerender.FlaskMimeRender()
+render_json = lambda **args: json.dumps(args)
 
-
-def create_application():
-    return web.application(urls, globals(), autoreload=True)
+app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    web.config.debug = True
-    app = create_application()
-    app.run()
+@app.route('/pay_peroids_remaining', methods=['GET'])
+@mimerender(default="json", json=render_json)
+def api_pay_peroids_remaining():
+    return {'pay_peroids_remaining': logic.pay_peroids_remaining()}
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8002)

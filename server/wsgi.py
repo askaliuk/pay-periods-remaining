@@ -1,3 +1,1 @@
-from app import create_application
-
-application = create_application().wsgifunc()
+from app import app as application
