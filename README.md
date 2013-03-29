@@ -34,11 +34,7 @@ Assuming that Python-based API is on localhost:8002
        		root   /path/to/pay-periods-remaining/client/public;
        	}
 
-       	location = /api {
-        	proxy_set_header Host $http_host;
-        	proxy_redirect off;
-        	proxy_set_header X-Real-IP $remote_addr;
-        	proxy_set_header X-Scheme $scheme;
-        	proxy_pass http://localhost:8002/;
+      location ^~ /api {
+          proxy_pass http://localhost:8002;
     	}
 	}
