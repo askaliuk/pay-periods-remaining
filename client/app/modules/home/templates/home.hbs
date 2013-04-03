@@ -13,20 +13,20 @@
 
   <div class="description">
     <h4>Simple application which helps to calculate pay periods remaining in current year.</h4>
-    <form>
+    <form id="ppr_form">
       <fieldset>
         <label>Start date</label>
         <div class="input-append">
-          <input class="span2" type="text" placeholder="mm/dd/yyyy">
-          <button class="btn" type="button">Today</button>
+          <input class="span2" type="text" placeholder="mm/dd/yyyy" name="start_date">
+          <button class="btn" type="button" id="start_date_today">Today</button>
         </div>
         <label>Pay frequency</label>
         <div>
-          <select name="drop1" id="Select1" size="1">
+          <select size="1" name="pay_frequency">
             <option value="sm">Semi-monthly</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-large btn-success">Calculate</button>
+        <button type="button" id="calculate" class="btn btn-large btn-success">Calculate</button>
       </fieldset>
     </form>
   </div>

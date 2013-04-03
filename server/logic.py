@@ -2,7 +2,7 @@ from datetime import datetime
 from dateutil.rrule import rrule, MONTHLY
 
 
-def pay_peroids_remaining(start_date=None):
+def pay_periods_remaining(start_date=None):
     if start_date is None:
         start_date = datetime.today()
     # TODO(askalyuk): semi-monthly support for now only

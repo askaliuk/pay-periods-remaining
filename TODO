@@ -4,7 +4,6 @@ How to use TODO:
 * ⌘ + d**: toggle task as completed
 
 TODO:
- ✔ put JavaScript client template and setup static serving @done (13-03-28 08:17)
- ✔ implement basic UI (header, start date select, pay frequency select) @done (13-03-28 16:33)
- ☐ migrate to Flask
- ☐ implement model and server API call
+ ✔ implement model and server API call @done (13-04-03 10:25)
+ ☐ implement calculation result render
+ ☐ implement validation
