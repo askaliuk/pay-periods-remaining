@@ -11,24 +11,38 @@
 
   <hr>
 
-  <div class="description">
-    <h4>Simple application which helps to calculate pay periods remaining in current year.</h4>
-    <form id="ppr_form">
-      <fieldset>
-        <label>Start date</label>
-        <div class="input-append">
-          <input class="span2" type="text" placeholder="mm/dd/yyyy" name="start_date">
-          <button class="btn" type="button" id="start_date_today">Today</button>
-        </div>
-        <label>Pay frequency</label>
-        <div>
-          <select size="1" name="pay_frequency">
-            <option value="sm">Semi-monthly</option>
-          </select>
-        </div>
-        <button type="button" id="calculate" class="btn btn-large btn-success">Calculate</button>
-      </fieldset>
-    </form>
+  <div class="row">
+    <div class="span8">
+      <h4>Simple application which helps to calculate pay periods remaining in current year.</h4>
+    </div>
+  </div>
+
+  <div class="row ppr_form">
+    <div class="span3">
+      <form>
+        <fieldset>
+          <label>Start date</label>
+          <div class="input-append">
+            <input class="span2" type="text" placeholder="mm/dd/yyyy" name="start_date">
+            <button class="btn start_date_today" type="button">Today</button>
+          </div>
+          <label>Pay frequency</label>
+          <div>
+            <select size="1" name="pay_frequency">
+              <option value="sm">Semi-monthly</option>
+            </select>
+          </div>
+          <button type="button" class="calculate btn btn-large btn-success">Calculate</button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="span3">
+      <div class="alert alert-success ppr_alert">
+        Pay periods remaining: <span class="ppr_result">?</span>
+      </div>
+      <div class="alert alert-error ppr_error">
+      </div>
+    </div>
   </div>
 
   <hr>

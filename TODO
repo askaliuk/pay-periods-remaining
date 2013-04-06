@@ -5,5 +5,12 @@ How to use TODO:
 
 TODO:
  ✔ implement model and server API call @done (13-04-03 10:25)
- ☐ implement calculation result render
- ☐ implement validation
+ ✔ implement calculation result render @done (13-04-04 17:18)
+ ✔ implement validation (migrate to http://blog.luisrei.com/articles/flaskrest.html) @done (13-04-05 11:55)
+ ✔ implement setToday() @done (13-04-05 17:56)
+ ☐ read about Backbone view elements cache
+
+ Refactoring:
+ ☐ separate templates of home view and calculate form
+ ☐ define clear API between home view and calculate view
+ ☐ make calculate view fully independent
