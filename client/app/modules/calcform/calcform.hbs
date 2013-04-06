@@ -1,0 +1,32 @@
+<div class="span3">
+  <form>
+    <fieldset>
+      <label>Start date</label>
+      <div class="input-append">
+        <input class="span2 start_date" type="text" placeholder="mm/dd/yyyy" name="start_date" value="{{pay_data.start_date}}">
+        <button class="btn start_date_today" type="button">Today</button>
+      </div>
+      <label>Pay frequency</label>
+      <div>
+        <select size="1" class="frequency" name="frequency">
+          {{#each frequency_items}}
+            <option value="{{this.value}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <button type="button" class="calculate btn btn-large btn-success">Calculate</button>
+    </fieldset>
+  </form>
+</div>
+<div class="span3">
+  {{#if pay_data.pay_periods_remaining}}
+    <div class="alert alert-success">
+      Pay periods remaining: {{pay_data.pay_periods_remaining}}
+    </div>
+  {{/if}}
+  {{#if error}}
+    <div class="alert alert-error">
+      {{error}}
+    </div>
+  {{/if}}
+</div>
