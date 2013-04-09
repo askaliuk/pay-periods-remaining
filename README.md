@@ -13,13 +13,17 @@ Run development server:
 
 # Client
 
-Build client (into client/public folder):
+Build development client (into client/public folder):
 
     cd client && brunch build
 
 Watch client directory and rebuild if something changed:
 
     cd client && brunch watch
+
+Production build:
+
+    cd client && brunch build --optimize
 
 # Nginx configuration example
 

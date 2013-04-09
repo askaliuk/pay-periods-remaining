@@ -7,7 +7,7 @@ var CalcFormView = Backbone.View.extend({
 
     events: {
       'click .calculate' : 'calculate',
-      'click .start_date_today' : 'setToday'
+      'click .start_date_today' : 'onTodayClick'
     },
 
     initialize: function(){
@@ -28,7 +28,7 @@ var CalcFormView = Backbone.View.extend({
         });
     },
 
-    setToday: function() {
+    getToday: function(){
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; // January is 0!
@@ -36,7 +36,11 @@ var CalcFormView = Backbone.View.extend({
         if (dd < 10) {dd = '0' + dd;}
         if (mm < 10) {mm = '0' + mm;}
         today = mm + '/' + dd + '/' + yyyy;
-        this.model.set('start_date', today);
+        return today;
+    },
+
+    onTodayClick: function() {
+        this.model.set('start_date', this.getToday());
         this.render();
     },
 
@@ -56,6 +60,7 @@ var CalcFormView = Backbone.View.extend({
             error: this.error
         };
         this.$el.html(this.template(context));
+        this.trigger("render:finished"); // for tests
         return this;
     }
 });

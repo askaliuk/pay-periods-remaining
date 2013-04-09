@@ -4,10 +4,12 @@ How to use TODO:
 * ⌘ + d**: toggle task as completed
 
 TODO:
- ✔ implement setToday() @done (13-04-05 17:56)
- ✔ read about Backbone view elements cache @done (13-04-05 18:17)
- ✔ separate templates of home view and calculate form @done (13-04-05 21:01)
- ✔ define clear API between home view and calculate view @done (13-04-05 21:01)
  ✔ make calculate view fully independent @done (13-04-05 21:01)
- ☐ obfuscated compile for prod
- ☐ make javascript and python tests
+ ✔ obfuscated compile for prod @done (13-04-05 21:08)
+ ✔ make javascript tests @done (13-04-08 20:42)
+ ☐ make python tests
+ ☐ support for additional frequencies
+ ☐ show payment calendar
+ ☐ implement correct calculation for end of the year
+ ☐ openshift deployment
+ ☐ improve README
