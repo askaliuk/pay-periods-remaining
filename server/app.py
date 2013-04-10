@@ -10,7 +10,6 @@ app = Flask(__name__)
 @app.route('/pay_periods_remaining', methods=['GET'])
 def api_pay_peroids_remaining():
     start_date = request.args.get('start_date', None)
-    print start_date
     frequency = request.args.get('frequency', None)
     if not all([start_date, frequency]):
         return validation_error('All fields are required')
