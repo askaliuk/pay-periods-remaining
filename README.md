@@ -3,13 +3,17 @@ Pay period remaining
 
 Simple web application which helps to calculate pay periods, remaining in current year.
 
-Current version: pre-alpha
+Current version: alpha
 
 # Server
 
 Run development server:
 
 	python server/app.py
+
+Run server tests:
+
+  server/run_tests.sh
 
 # Client
 
@@ -25,20 +29,6 @@ Production build:
 
     cd client && brunch build --optimize
 
-# Nginx configuration example
+Client tests (on browser):
 
-Assuming that Python-based API is on localhost:8002
-
-    server {
-        listen       8001;
-        listen       localhost:8001;
-        server_name  localhost;
-
-   		location / {
-       		root   /path/to/pay-periods-remaining/client/public;
-       	}
-
-      location ^~ /api {
-          proxy_pass http://localhost:8002;
-    	}
-	}
+    http://localhost:8002/static/test/index.html

@@ -1,1 +1,2 @@
-from app import app as application
+from app import init_application
+application = init_application()
