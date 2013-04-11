@@ -9,9 +9,9 @@
       <label>Pay frequency</label>
       <div>
         <select size="1" class="frequency" name="frequency">
-          {{#each frequency_items}}
-            <option value="{{this.value}}">{{this.name}}</option>
-          {{/each}}
+          {{#eachKeyValue frequency}}
+            <option value="{{this.key}}">{{this.value}}</option>
+          {{/eachKeyValue}}
         </select>
       </div>
       <button type="button" class="calculate btn btn-large btn-success">Calculate</button>

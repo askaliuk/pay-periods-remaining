@@ -1,6 +1,6 @@
 var Frequency = {
 	// TODO(askalyuk): implement others
-    SEMI_MONTHLY : {value: 'sm', name: 'Semi-monthly'}
+    SEMI_MONTHLY: 'Semi-monthly'
 };
 
 var PayData = Backbone.Model.extend({

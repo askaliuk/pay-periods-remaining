@@ -1,3 +1,6 @@
+// Load template helpers
+require('modules/common/tmpl_helpers');
+
 // Application bootstrapper.
 Application = {
     initialize: function() {

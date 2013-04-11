@@ -2,6 +2,7 @@ var PayData = require('./models').PayData,
     Frequency = require('./models').Frequency,
     template = require('./calcform');
 
+
 var CalcFormView = Backbone.View.extend({
     template: template,
 
@@ -55,7 +56,7 @@ var CalcFormView = Backbone.View.extend({
 
     render: function(){
         var context = {
-            frequency_items: Frequency,
+            frequency: Frequency,
             pay_data: this.model.attributes,
             error: this.error
         };
