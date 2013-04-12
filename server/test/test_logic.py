@@ -13,5 +13,11 @@ class LogicTestCase(unittest.TestCase):
         self.assertEqual(1, logic.pay_periods_remaining(
             datetime(2013, 12, 31)))
 
+        self.assertEqual(18, logic.pay_periods_remaining(
+            datetime(2014, 4, 11)))
+        self.assertEqual(2, logic.pay_periods_remaining(
+            datetime(2014, 12, 1)))
+
+
 if __name__ == '__main__':
     unittest.main()
