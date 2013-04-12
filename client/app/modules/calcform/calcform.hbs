@@ -9,8 +9,10 @@
       <label>Pay frequency</label>
       <div>
         <select size="1" class="frequency" name="frequency">
-          {{#eachKeyValue frequency}}
-            <option value="{{this.key}}">{{this.value}}</option>
+          {{#eachKeyValue frequencies_list}}
+            <option value='{{this.key}}' {{#selected_if this.key compare=../frequency}}{{/selected_if}}>
+              {{this.value}}
+            </option>
           {{/eachKeyValue}}
         </select>
       </div>

@@ -58,7 +58,9 @@ var CalcFormView = Backbone.View.extend({
 
     render: function(){
         var context = {
-            frequency: Frequency,
+            frequencies_list: Frequency,
+            frequency: (this.model.has('frequency')) ? this.model.get('frequency')
+                        : 'SEMI_MONTHLY',
             pay_data: this.model.attributes,
             error: this.error
         };

@@ -21,7 +21,7 @@ def api_pay_peroids_remaining():
     if not frequency in Frequency:
         return validation_error('Invalid frequency')
     return jsonify({'pay_periods_remaining':
-                    logic.pay_periods_remaining(start_date)})
+                    logic.pay_periods_remaining(start_date, frequency)})
 
 
 def init_urls(app):

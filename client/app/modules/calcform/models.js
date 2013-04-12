@@ -1,6 +1,9 @@
 var Frequency = {
-	// TODO(askalyuk): implement others
-    SEMI_MONTHLY: 'Semi-monthly'
+    DAILY: 'Daily',
+    WEEKLY: 'Weekly',
+    SEMI_MONTHLY: 'Semi-monthly',
+    MONTHLY: 'Monthly',
+    QUARTERLY: 'Quarterly'
 };
 
 var PayData = Backbone.Model.extend({
@@ -8,7 +11,7 @@ var PayData = Backbone.Model.extend({
 
     defaults: {
         "start_date": null,
-        "frequency": Frequency.SEMI_MONTHLY,
+        "frequency": null,
         "pay_periods_remaining": null
     }
 });

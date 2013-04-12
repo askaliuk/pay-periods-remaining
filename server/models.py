@@ -4,4 +4,4 @@ class Enum(set):
             return name
         raise AttributeError
 
-Frequency = Enum(['SEMI_MONTHLY'])
+Frequency = Enum(['DAILY', 'WEEKLY', 'SEMI_MONTHLY', 'MONTHLY', 'QUARTERLY'])

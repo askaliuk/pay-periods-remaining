@@ -5,7 +5,8 @@ from models import Frequency
 class ModelsTestCase(unittest.TestCase):
 
     def test_frequency(self):
-        self.assertEqual(Frequency.SEMI_MONTHLY, 'SEMI_MONTHLY')
+        for fr in Frequency:
+            self.assertEqual(getattr(Frequency, fr), fr)
 
 if __name__ == '__main__':
     unittest.main()

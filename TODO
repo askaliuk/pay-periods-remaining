@@ -6,7 +6,8 @@ How to use TODO:
 TODO:
  ✔ try to render frequency enum on server @done (13-04-11 15:09)
  ✔ implement correct calculation for end of the year @done (13-04-11 20:58)
- ☐ support for additional frequencies
+ ✔ support for additional frequencies @done (13-04-12 15:56)
  ☐ show payment calendar
  ☐ improve README
  ☐ implement "How it works" page
+ ☐ implement better JavaScript tests coverage (e.g. save action)
