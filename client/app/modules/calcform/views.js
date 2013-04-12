@@ -1,3 +1,5 @@
+require('modules/common/tmpl_helpers');
+
 var PayData = require('./models').PayData,
     Frequency = require('./models').Frequency,
     template = require('./calcform');

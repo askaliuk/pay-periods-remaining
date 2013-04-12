@@ -1,4 +1,4 @@
-from app import app
+from app import init_application
 from flask.ext.testing import TestCase
 from flask import url_for
 from datetime import datetime
@@ -8,11 +8,12 @@ from models import Frequency
 class ApiTestCase(TestCase):
 
     def create_app(self):
-        app.config['TESTING'] = True
-        return app
+        self.app = init_application()
+        self.app.config['TESTING'] = True
+        return self.app
 
     def setUp(self):
-        self.client = app.test_client()
+        self.client = self.app.test_client()
 
     def test_validation(self):
         response = self.client.get(url_for("api_pay_peroids_remaining"))

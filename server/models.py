@@ -1,10 +1,7 @@
-class Frequency(object):
-    data = ['SEMI_MONTHLY']
-
+class Enum(set):
     def __getattr__(self, name):
-        if name in Frequency.data:
+        if name in self:
             return name
+        raise AttributeError
 
-    @staticmethod
-    def is_valid(frequency):
-        return frequency in Frequency.data
+Frequency = Enum(['SEMI_MONTHLY'])

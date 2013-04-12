@@ -18,7 +18,7 @@ def api_pay_peroids_remaining():
         start_date = datetime.strptime(start_date, '%m/%d/%Y')
     except ValueError:
         return validation_error('Invalid date')
-    if not Frequency.is_valid(frequency):
+    if not frequency in Frequency:
         return validation_error('Invalid frequency')
     return jsonify({'pay_periods_remaining':
                     logic.pay_periods_remaining(start_date)})
@@ -28,7 +28,7 @@ def init_urls(app):
     app.add_url_rule('/', 'index', index, methods=['GET'])
     app.add_url_rule(
         '/api/pay_periods_remaining',
-        'pay_periods_remaining',
+        'api_pay_peroids_remaining',
         api_pay_peroids_remaining, methods=['GET'])
 
 
