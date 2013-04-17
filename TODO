@@ -7,8 +7,9 @@ TODO:
  ✔ try to render frequency enum on server @done (13-04-11 15:09)
  ✔ implement correct calculation for end of the year @done (13-04-11 20:58)
  ✔ support for additional frequencies @done (13-04-12 15:56)
- ☐ improve README
+ ✔ improve README @done (13-04-17 16:25)
  ☐ implement "How it works" page
+ ☐ contribute back to skeleton
 
  Improvements:
  ☐ show payment calendar
