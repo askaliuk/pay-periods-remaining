@@ -3,6 +3,8 @@ from flask import Flask, request, jsonify, render_template
 from errors import validation_error
 import logic
 from models import Frequency
+import logging
+import os
 
 
 def index():
@@ -32,6 +34,16 @@ def init_urls(app):
         api_pay_peroids_remaining, methods=['GET'])
 
 
+def init_logging(app):
+    if not app.debug:
+        logdir = os.getenv('OPENSHIFT_DIY_LOG_DIR', '/tmp')
+        from logging.handlers import RotatingFileHandler
+        handler = RotatingFileHandler(
+            os.path.join(logdir, 'api.log'), maxBytes=10000, backupCount=1)
+        handler.setLevel(logging.INFO)
+        app.logger.addHandler(handler)
+
+
 def init_application(static_url_path=None, static_folder=None):
     if static_url_path and static_folder:
         app = Flask(
@@ -41,6 +53,7 @@ def init_application(static_url_path=None, static_folder=None):
     else:
         app = Flask(__name__)
     init_urls(app)
+    init_logging(app)
     return app
 
 if __name__ == '__main__':
