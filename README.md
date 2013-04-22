@@ -18,7 +18,7 @@ Deployed on [ppr-askaliuk.rhcloud.com](http://ppr-askaliuk.rhcloud.com/)
   * Flask on backend
   * python-dateutil
 
-  Application skeleton: [askalyuk/brunch-banana-pancakes](https://github.com/askalyuk/brunch-banana-pancakes)
+  Application skeleton: [askalyuk/brunch-fruits](https://github.com/askalyuk/brunch-fruits)
 
 # Dependencies
 
